@@ -10,7 +10,7 @@ namespace SocialMedia.Infrastructure.Data.DTOs
         [JsonPropertyName("id")]
         public string Id { get; set; } = string.Empty;
 
-        [Required]
+        [Required(ErrorMessage = "Username is required!")]
         [JsonPropertyName("username")]
         [StringLength(MaxUsernameLength, MinimumLength = 4, ErrorMessage = "Invalid username!")]
         public string Username { get; set; } = string.Empty;
@@ -25,12 +25,12 @@ namespace SocialMedia.Infrastructure.Data.DTOs
         [JsonPropertyName("avatar")]
         public string Avatar {get; set;} = string.Empty;
 
-        [Required]
+        [Required(ErrorMessage = "Bio is required!")]
         [MaxLength(MaxBioLength)]
         [JsonPropertyName("bio")]
         public string Bio {get; set;} = string.Empty;
 
-        [Required]
+        [Required(ErrorMessage = "Created at date is required!")]
         [JsonPropertyName("createdAt")]
         public DateTime CreatedAt {get; set;}
     }

@@ -8,5 +8,10 @@ namespace SocialMedia.Infrastructure.Data.Constants
             public const int MaxEmailLength = 200;
             public const int MaxBioLength = 2000;
         }
+
+        public static class PostConstants
+        {
+            public const int MaxPostLength = 2000;
+        }
     }
 }
