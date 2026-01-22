@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SocialMedia.Infrastructure.Data;
 
@@ -11,9 +12,11 @@ using SocialMedia.Infrastructure.Data;
 namespace SocialMedia.Infrastructure.Data.Migrations
 {
     [DbContext(typeof(SocialMediaDbContext))]
-    partial class SocialMediaDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260122092025_AddedFollowers")]
+    partial class AddedFollowers
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -45,148 +48,6 @@ namespace SocialMedia.Infrastructure.Data.Migrations
                     b.HasIndex("FollowingId");
 
                     b.ToTable("Followers");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = "follow-01-a81f",
-                            CreatedAt = new DateTime(2025, 1, 5, 10, 0, 0, 0, DateTimeKind.Utc),
-                            FollowerId = "a6a7d7a9-43e5-4ad1-9c89-41287b4d3902",
-                            FollowingId = "1c7a44e8-6c82-4a51-8e77-15bdfd5b8a01"
-                        },
-                        new
-                        {
-                            Id = "follow-02-b19f",
-                            CreatedAt = new DateTime(2025, 1, 5, 11, 0, 0, 0, DateTimeKind.Utc),
-                            FollowerId = "f52b5f4d-8c4e-4b3a-91fd-3c79cdb1c903",
-                            FollowingId = "1c7a44e8-6c82-4a51-8e77-15bdfd5b8a01"
-                        },
-                        new
-                        {
-                            Id = "follow-03-c7fa",
-                            CreatedAt = new DateTime(2025, 1, 6, 9, 0, 0, 0, DateTimeKind.Utc),
-                            FollowerId = "c91e9189-281f-48c3-b8ad-1b20f4f10104",
-                            FollowingId = "a6a7d7a9-43e5-4ad1-9c89-41287b4d3902"
-                        },
-                        new
-                        {
-                            Id = "follow-04-d812",
-                            CreatedAt = new DateTime(2025, 1, 6, 10, 0, 0, 0, DateTimeKind.Utc),
-                            FollowerId = "da3a7cb3-5d90-45d2-83d9-9f8a2d92a105",
-                            FollowingId = "f52b5f4d-8c4e-4b3a-91fd-3c79cdb1c903"
-                        },
-                        new
-                        {
-                            Id = "follow-05-e811",
-                            CreatedAt = new DateTime(2025, 1, 7, 11, 0, 0, 0, DateTimeKind.Utc),
-                            FollowerId = "b9f4c2d1-4d94-4ff6-87aa-0ccf933bf106",
-                            FollowingId = "e38db6c0-7b92-4f0f-b76a-d7b7f1aab107"
-                        },
-                        new
-                        {
-                            Id = "follow-06-f211",
-                            CreatedAt = new DateTime(2025, 1, 8, 12, 0, 0, 0, DateTimeKind.Utc),
-                            FollowerId = "17a7f919-62b3-4b1b-94bb-8cf80b8aa108",
-                            FollowingId = "c6fdb72c-65b1-42df-bd03-4a3ff37f6109"
-                        },
-                        new
-                        {
-                            Id = "follow-07-911a",
-                            CreatedAt = new DateTime(2025, 1, 8, 14, 0, 0, 0, DateTimeKind.Utc),
-                            FollowerId = "88dfb5b0-12c2-42d6-bb0d-9eaa9e9a3110",
-                            FollowingId = "bf8ad623-ff4a-44b3-b2b2-109cbe8a2111"
-                        },
-                        new
-                        {
-                            Id = "follow-08-71ab",
-                            CreatedAt = new DateTime(2025, 1, 9, 9, 0, 0, 0, DateTimeKind.Utc),
-                            FollowerId = "2df3b7c4-29c2-41b2-b2cb-51c8f20d8112",
-                            FollowingId = "4b46a84d-21a3-44db-9d2f-68c2f51f3113"
-                        },
-                        new
-                        {
-                            Id = "follow-09-2f81",
-                            CreatedAt = new DateTime(2025, 1, 10, 10, 0, 0, 0, DateTimeKind.Utc),
-                            FollowerId = "aa9aef99-4d6f-4b7a-b3a7-0b2b8d731116",
-                            FollowingId = "82b1e839-f782-4c16-a1c2-2f8f1a2a5115"
-                        },
-                        new
-                        {
-                            Id = "follow-10-91af",
-                            CreatedAt = new DateTime(2025, 1, 11, 11, 0, 0, 0, DateTimeKind.Utc),
-                            FollowerId = "bbcfb1c7-d4a6-46fa-a9cc-5c9df8d07117",
-                            FollowingId = "d14dc8ad-3b9f-4f1a-b50a-82d0c3e71118"
-                        },
-                        new
-                        {
-                            Id = "follow-11-acde",
-                            CreatedAt = new DateTime(2025, 1, 12, 9, 0, 0, 0, DateTimeKind.Utc),
-                            FollowerId = "1c7a44e8-6c82-4a51-8e77-15bdfd5b8a01",
-                            FollowingId = "a6a7d7a9-43e5-4ad1-9c89-41287b4d3902"
-                        },
-                        new
-                        {
-                            Id = "follow-12-acde",
-                            CreatedAt = new DateTime(2025, 1, 12, 9, 30, 0, 0, DateTimeKind.Utc),
-                            FollowerId = "1c7a44e8-6c82-4a51-8e77-15bdfd5b8a01",
-                            FollowingId = "f52b5f4d-8c4e-4b3a-91fd-3c79cdb1c903"
-                        },
-                        new
-                        {
-                            Id = "follow-13-acde",
-                            CreatedAt = new DateTime(2025, 1, 13, 10, 0, 0, 0, DateTimeKind.Utc),
-                            FollowerId = "a6a7d7a9-43e5-4ad1-9c89-41287b4d3902",
-                            FollowingId = "da3a7cb3-5d90-45d2-83d9-9f8a2d92a105"
-                        },
-                        new
-                        {
-                            Id = "follow-14-acde",
-                            CreatedAt = new DateTime(2025, 1, 13, 11, 0, 0, 0, DateTimeKind.Utc),
-                            FollowerId = "f52b5f4d-8c4e-4b3a-91fd-3c79cdb1c903",
-                            FollowingId = "b9f4c2d1-4d94-4ff6-87aa-0ccf933bf106"
-                        },
-                        new
-                        {
-                            Id = "follow-15-acde",
-                            CreatedAt = new DateTime(2025, 1, 14, 9, 0, 0, 0, DateTimeKind.Utc),
-                            FollowerId = "c6fdb72c-65b1-42df-bd03-4a3ff37f6109",
-                            FollowingId = "88dfb5b0-12c2-42d6-bb0d-9eaa9e9a3110"
-                        },
-                        new
-                        {
-                            Id = "follow-16-acde",
-                            CreatedAt = new DateTime(2025, 1, 14, 10, 0, 0, 0, DateTimeKind.Utc),
-                            FollowerId = "82b1e839-f782-4c16-a1c2-2f8f1a2a5115",
-                            FollowingId = "aa9aef99-4d6f-4b7a-b3a7-0b2b8d731116"
-                        },
-                        new
-                        {
-                            Id = "follow-17-acde",
-                            CreatedAt = new DateTime(2025, 1, 15, 11, 0, 0, 0, DateTimeKind.Utc),
-                            FollowerId = "d14dc8ad-3b9f-4f1a-b50a-82d0c3e71118",
-                            FollowingId = "1c7a44e8-6c82-4a51-8e77-15bdfd5b8a01"
-                        },
-                        new
-                        {
-                            Id = "follow-18-acde",
-                            CreatedAt = new DateTime(2025, 1, 16, 9, 0, 0, 0, DateTimeKind.Utc),
-                            FollowerId = "bbcfb1c7-d4a6-46fa-a9cc-5c9df8d07117",
-                            FollowingId = "a6a7d7a9-43e5-4ad1-9c89-41287b4d3902"
-                        },
-                        new
-                        {
-                            Id = "follow-19-acde",
-                            CreatedAt = new DateTime(2025, 1, 17, 10, 0, 0, 0, DateTimeKind.Utc),
-                            FollowerId = "17a7f919-62b3-4b1b-94bb-8cf80b8aa108",
-                            FollowingId = "1c7a44e8-6c82-4a51-8e77-15bdfd5b8a01"
-                        },
-                        new
-                        {
-                            Id = "follow-20-acde",
-                            CreatedAt = new DateTime(2025, 1, 18, 9, 0, 0, 0, DateTimeKind.Utc),
-                            FollowerId = "2df3b7c4-29c2-41b2-b2cb-51c8f20d8112",
-                            FollowingId = "82b1e839-f782-4c16-a1c2-2f8f1a2a5115"
-                        });
                 });
 
             modelBuilder.Entity("SocialMedia.Infrastructure.Data.Models.Message", b =>

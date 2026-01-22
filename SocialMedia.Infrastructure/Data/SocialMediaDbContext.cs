@@ -19,11 +19,14 @@ namespace SocialMedia.Infrastructure.Data
             modelBuilder.ApplyConfiguration(new UserConfiguration());
             modelBuilder.ApplyConfiguration(new PostConfiguration());
             modelBuilder.ApplyConfiguration(new MessageConfiguration());
+            modelBuilder.ApplyConfiguration(new FollowerConfiguration());
+
             base.OnModelCreating(modelBuilder);
         }
 
         public DbSet<User> Users {get; set;}
         public DbSet<Post> Posts {get; set;}
         public DbSet<Message> Messages {get; set;}
+        public DbSet<Follower> Followers {get; set;}
     }
 }
